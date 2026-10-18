@@ -1,16 +1,20 @@
 <!doctype html>
-<html lang="">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <title>GitHub Repo Gallery</title>
   <link
   rel="stylesheet"
-  href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Oswald:wght@500&display=swap"
->
+  href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Oswald:wght@500&display=swap">
+<link
+  rel="stylesheet"
+  href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+  integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+  crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
-  <meta name="description" content="">
+  <meta name="description" content="Explore a GitHub profile, browse repositories, and view repository details.">
 
   <meta property="og:title" content="">
   <meta property="og:type" content="">
@@ -28,14 +32,132 @@
 
 <body>
 
-x
   <div class="badge" aria-hidden="true">
   <div class="circle"></div>
 </div>
 
 <header>
-  <h1>GitHub Repo Gallery</h1>
+   <i class="fab fa-github-alt" aria-hidden="true"></i><h1>GitHub Repo Gallery</h1>
 </header>
+
+<main class="page">
+  <section class="user-info" aria-label="GitHub profile">
+    <img
+      class="user-avatar"
+      src="img/tauri-stclaire-avatar.jpg"
+      alt="Tauri StClaire"
+    >
+
+    <div class="user-details">
+      <p class="user-name">
+        <strong><span>Tauri StClaire</span></strong>
+      </p>
+
+      <p class="user-bio">
+        <span>Hello! I am a responsive coder who loves Javascript React! HTML5 CSS3 FTP Web Hosting Git Version Control JSX ES6</span>
+      </p>
+
+      <p class="user-location">
+        Location: <span>San Diego, California</span>
+      </p>
+
+      <p class="user-stats">
+        Public repos: <span>118</span>
+      </p>
+
+      <hr>
+    </div>
+  </section>
+
+  <section class="repos" aria-label="Repository gallery">
+    <div class="search">
+      <label for="filter-repos">Search repositories</label>
+
+      <input
+        type="text"
+        id="filter-repos"
+        class="filter-repos"
+        placeholder="Search by repository name"
+      >
+
+      <i class="fas fa-search" aria-hidden="true"></i>
+    </div>
+
+    <ul class="repo-list">
+      <li class="repo">
+        <button type="button" class="repo-name">
+          gen-ai-recipe-chatbot
+        </button>
+      </li>
+
+      <li class="repo">
+        <button type="button" class="repo-name">
+          105-turn_back_time-2
+        </button>
+      </li>
+
+      <li class="repo">
+        <button type="button" class="repo-name">
+          wordpress-nutrition-blog
+        </button>
+      </li>
+
+      <li class="repo">
+        <button type="button" class="repo-name">
+          national-park-tour-planner
+        </button>
+      </li>
+
+      <li class="repo">
+        <button type="button" class="repo-name">
+          study-buddy-with-ui
+        </button>
+      </li>
+
+      <li class="repo">
+        <button type="button" class="repo-name">
+          study-buddy
+        </button>
+      </li>
+    </ul>
+  </section>
+
+  <div class="repo-details">
+    <section class="repo-data" aria-labelledby="repo-detail-name">
+      <h2 id="repo-detail-name">
+        <span>gen-ai-recipe-chatbot</span>
+      </h2>
+
+      <p>
+        <strong>Description:</strong>
+        <span>ChefBoost Gen AI app made with LangChain, Supabase, and pgvector</span>
+      </p>
+
+      <p>
+        <strong>Default branch:</strong>
+        <span>main</span>
+      </p>
+
+      <p>
+        <strong>Languages:</strong>
+        <span>Python, JavaScript, CSS, HTML, PLpgSQL</span>
+      </p>
+
+      <a
+        class="view-repos"
+        href="https://github.com/tauri-st/gen-ai-recipe-chatbot"
+      >
+        View Repo on GitHub!
+      </a>
+    </section>
+
+    <div class="repo-actions">
+      <button type="button" class="back-to-gallery">
+        Back to Repo Gallery
+      </button>
+    </div>
+  </div>
+</main>
 
   <script src="js/app.js"></script>
 
