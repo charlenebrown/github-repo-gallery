@@ -37,11 +37,17 @@
 </div>
 
 <header>
-   <i class="fab fa-github-alt" aria-hidden="true"></i><h1>GitHub Repo Gallery</h1>
+  <h1>
+    <i class="fab fa-github-alt" aria-hidden="true"></i>
+    GitHub Repo Gallery
+  </h1>
 </header>
 
 <main class="page">
-  <section class="user-info" aria-label="GitHub profile">
+ <section class="user-info" aria-labelledby="profile-heading">
+  <h2 id="profile-heading" class="visually-hidden">
+    GitHub profile
+  </h2>
     <img
       class="user-avatar"
       src="img/tauri-stclaire-avatar.jpg"
@@ -69,7 +75,10 @@
     </div>
   </section>
 
-  <section class="repos" aria-label="Repository gallery">
+<section class="repos" aria-labelledby="gallery-heading">
+  <h2 id="gallery-heading" class="visually-hidden">
+    Repository gallery
+  </h2>
     <div class="search">
       <label for="filter-repos">Search repositories</label>
 
