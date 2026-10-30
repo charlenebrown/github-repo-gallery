@@ -27,6 +27,8 @@ const displayUserInfo = function (data) {
     location.textContent = data.location || "Not specified.";
     stats.textContent = data.public_repos;
 
+    document.querySelector(".user-info").hidden = false;
+
     gitRepos();
 };
 

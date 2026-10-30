@@ -281,7 +281,7 @@ h1 i {
 
 .filter-repos:focus-visible,
 .repo-name:focus-visible {
-  outline: 3px solid #483978;
+  outline: 3px solid var(--mustard);
   outline-offset: 3px;
 }
 
