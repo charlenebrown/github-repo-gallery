@@ -40,17 +40,26 @@ const gitRepos = async function () {
 
 const displayRepos = function (repos) {
     filterInput.classList.remove("hide");
+    repoList.replaceChildren();
+
     for (const repo of repos) {
         const repoItem = document.createElement("li");
         repoItem.classList.add("repo");
-        repoItem.innerHTML = `<button type="button" class="repo-name">${repo.name}</button>`;
+
+        const button = document.createElement("button");
+        button.type = "button";
+        button.classList.add("repo-name");
+        button.textContent = getGalleryTitle(repo.name);
+        button.dataset.repoName = repo.name;
+
+        repoItem.append(button);
         repoList.append(repoItem);
-    } 
+    }
 };
 
 repoList.addEventListener("click", function (e) {
     if (e.target.matches(".repo-name")) {
-        const repoName = e.target.innerText;
+        const repoName = e.target.dataset.repoName;
         getRepoInfo(repoName);
     }
 });
@@ -88,7 +97,7 @@ const displayRepoInfo = function (repoInfo, languages) {
     const div = document.createElement("div");
     div.classList.add("repo-info");
     div.innerHTML = `
-        <h2>Name: ${repoInfo.name}</h2>
+       <h2 id="repo-detail-name">${getGalleryTitle(repoInfo.name)}</h2>
         <p>Description: ${repoInfo.description}</p>
         <p>Default Branch: ${repoInfo.default_branch}</p>
         <p>Languages: ${languages.join(", ")}</p>
@@ -110,7 +119,9 @@ filterInput.addEventListener("input", function (e) {
     const searchLowerText = searchText.toLowerCase();
 
     for (const repo of repos) {
-        const repoLowerText = repo.innerText.toLowerCase();
+        const button = repo.querySelector(".repo-name");
+        const repoLowerText =
+            `${button.textContent} ${button.dataset.repoName}`.toLowerCase();
         if (repoLowerText.includes(searchLowerText)) {
             repo.classList.remove("hide");
          } else {
@@ -118,3 +129,40 @@ filterInput.addEventListener("input", function (e) {
     }
   }
 });
+
+const galleryTitles = {
+    "github-repo-gallery": "GitHub Repo Gallery",
+    "guess-the-word": "Decode the Decision",
+    "sharons-pet-rescue-interactive": "Sharon’s Pet Rescue",
+    "random-image-api": "Random Image Generator",
+    "sound-of-becoming": "The Sound of Becoming",
+    "castellan-method": "The Castellan Method",
+    "writers-guild": "Writers Guild",
+    "charlenebrown": "About Charlene Brown",
+    "props-dot-notations": "Object Properties and Dot Notation",
+    "functon-powered-modal": "Function-Powered Modal",
+    "create-vacay-budget": "Vacation Budget Calculator",
+    "whats-your-function": "What’s Your Function?",
+    "creativenaturalista.github.io": "Cre8iveNaturalista",
+    "Divi-100-Back-To-Top": "Divi Back-to-Top Styles"
+};
+
+const getGalleryTitle = function (repoName) {
+    if (galleryTitles[repoName]) {
+        return galleryTitles[repoName];
+    }
+
+    const acronyms = ["html", "css", "js", "api", "dom"];
+
+    return repoName
+        .split(/[-_]+/)
+        .map(function (word) {
+            if (acronyms.includes(word.toLowerCase())) {
+                return word.toUpperCase();
+            }
+
+            return word.charAt(0).toUpperCase() + word.slice(1);
+        })
+        .join(" ");
+};
+
