@@ -1,4 +1,3 @@
-const userData = document.querySelector(".user-data");
 const username = "charlenebrown";
 const repoList = document.querySelector(".repo-list");
 const allReposContainer = document.querySelector(".repos");
@@ -15,17 +14,20 @@ const gitUserInfo = async function () {
 gitUserInfo();
 
 const displayUserInfo = function (data) {
-    const div = document.createElement("div");
-    div.classList.add("user-info");
-    div.innerHTML = `<figure><img alt="user avatar" src=${data.avatar_url} /></figure>
-        <div>
-        <p><strong>Name:</strong> ${data.name}</p>
-        <p><strong>Bio:</strong> ${data.bio}</p>
-        <p><strong>Location:</strong> ${data.location}</p>
-        <p><strong>Number of public repos:</strong> ${data.public_repos}</p>
-        </div>`;
+    const avatar = document.querySelector(".user-avatar");
+    const name = document.querySelector(".user-name span");
+    const bio = document.querySelector(".user-bio span");
+    const location = document.querySelector(".user-location span");
+    const stats = document.querySelector(".user-stats span");
 
-    userData.append(div);
+    avatar.src = data.avatar_url;
+    avatar.alt = `${data.name || username}'s GitHub avatar`;
+
+    name.textContent = data.name || username;
+    bio.textContent = data.bio || "No bio provided.";
+    location.textContent = data.location || "Not specified.";
+    stats.textContent = data.public_repos;
+
     gitRepos();
 };
 

@@ -136,6 +136,127 @@ h1 {
   line-height: 1.2;
 }
 
+
+/* Mobile page spacing and profile */
+
+.page {
+  width: 100%;
+  max-width: 75rem;
+  margin-inline: auto;
+  padding: 1.5rem 1rem;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.user-avatar {
+  display: block;
+  width: 12.5rem;
+  max-width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.user-details {
+  width: 100%;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.user-details p {
+  margin: 0 0 1rem;
+}
+
+.user-details hr {
+  margin: 1.5rem 0 0;
+}
+
+
+/* Repository search and gallery */
+
+.repos {
+  padding: 1.5rem 1rem;
+  background-color: #fff;
+}
+
+.search {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.search label {
+  width: 100%;
+  text-align: center;
+}
+
+.filter-repos {
+  width: 100%;
+  max-width: 20rem;
+  min-width: 0;
+  padding: 0.75rem;
+  border: 2px solid #483978;
+  font: inherit;
+}
+
+.search i {
+  color: #483978;
+}
+
+.repo-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.repo {
+  display: flex;
+  flex: 0 0 100%;
+  min-width: 0;
+  border: 1px solid #f7614a;
+}
+
+.repo-name {
+  width: 100%;
+  padding: 1rem;
+  border: 0;
+  background-color: transparent;
+  color: #f7614a;
+  font: inherit;
+  font-weight: 700;
+  text-align: left;
+  overflow-wrap: anywhere;
+  cursor: pointer;
+}
+
+.repo-name:hover {
+  background-color: #f7614a;
+  color: #fff;
+}
+
+.filter-repos:focus-visible,
+.repo-name:focus-visible {
+  outline: 3px solid #483978;
+  outline-offset: 3px;
+}
+
+.hide {
+  display: none !important;
+}
+
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -219,8 +340,20 @@ h1 {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+@media (min-width: 700px) {
+  .repos {
+    padding: 2rem;
+  }
+
+  .repo {
+    flex-basis: calc((100% - 1.5rem) / 2);
+  }
+}
+
+@media (min-width: 1200px) {
+  .repo {
+    flex-basis: calc((100% - 3rem) / 3);
+  }
 }
 
 @media print,
