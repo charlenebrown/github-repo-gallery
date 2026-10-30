@@ -353,6 +353,61 @@ h1 i {
 
 
 
+
+/* Pinned project showcase */
+
+.featured {
+  margin-bottom: 2rem;
+}
+
+.featured h2 {
+  color: var(--mustard);
+}
+
+.featured-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.featured-card {
+  flex: 0 0 100%;
+  min-width: 0;
+  padding: 1.5rem;
+  border: 1px solid var(--teal);
+  border-radius: 0.75rem;
+  background-color: var(--surface);
+  overflow-wrap: anywhere;
+}
+
+.featured-card h3 {
+  margin: 0 0 1rem;
+}
+
+.featured-card p {
+  margin: 0;
+}
+
+.featured-card a,
+.featured-card a:visited {
+  color: var(--teal);
+  text-underline-offset: 0.2em;
+}
+
+.featured-card a:hover {
+  color: var(--mustard);
+}
+
+.featured-card a:focus-visible {
+  outline: 3px solid var(--mustard);
+  outline-offset: 4px;
+}
+
+
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -439,6 +494,9 @@ h1 i {
 @media (min-width: 700px) {
   .repos {
     padding: 2rem;
+    .featured-card {
+    flex-basis: calc((100% - 1.5rem) / 2);
+    }
   }
 
   .repo {

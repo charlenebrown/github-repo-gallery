@@ -168,3 +168,51 @@ const getGalleryTitle = function (repoName) {
         .join(" ");
 };
 
+
+
+const loadFeaturedProjects = async function () {
+    try {
+        const response = await fetch("data/github-gallery.json");
+
+        if (!response.ok) {
+            throw new Error(`Gallery data returned ${response.status}.`);
+        }
+
+        const snapshot = await response.json();
+        const featuredList = document.querySelector(".featured-list");
+
+        featuredList.replaceChildren();
+
+        for (const fullName of snapshot.pinnedRepositories) {
+            const repo = snapshot.repositories.find(function (item) {
+                return item.full_name === fullName;
+            });
+
+            if (!repo) continue;
+
+            const card = document.createElement("li");
+            card.classList.add("featured-card");
+
+            const heading = document.createElement("h3");
+            const link = document.createElement("a");
+
+            link.textContent = getGalleryTitle(repo.name);
+            link.href = repo.html_url;
+
+            const description = document.createElement("p");
+            description.textContent =
+                repo.description || "Explore this project on GitHub.";
+
+            heading.append(link);
+            card.append(heading, description);
+            featuredList.append(card);
+        }
+
+        document.querySelector(".featured").hidden =
+            featuredList.children.length === 0;
+    } catch (error) {
+        console.error("Featured projects could not load:", error);
+    }
+};
+
+loadFeaturedProjects();

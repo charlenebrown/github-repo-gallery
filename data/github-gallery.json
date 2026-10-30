@@ -1,0 +1,956 @@
+{
+  "schemaVersion": 1,
+  "syncedAt": "2026-10-30T16:46:42.855Z",
+  "username": "charlenebrown",
+  "pinnedRepositories": [
+    "charlenebrown/charlenebrown",
+    "charlenebrown/zora-reign",
+    "charlenebrown/kingsbridge-university",
+    "charlenebrown/writers-guild"
+  ],
+  "languages": [
+    "Astro",
+    "C",
+    "CSS",
+    "Emacs Lisp",
+    "HTML",
+    "JavaScript",
+    "PHP",
+    "Python",
+    "Ruby",
+    "TypeScript",
+    "Vim Script",
+    "XSLT"
+  ],
+  "repositories": [
+    {
+      "id": 1423925804,
+      "name": "github-repo-gallery",
+      "full_name": "charlenebrown/github-repo-gallery",
+      "owner": "charlenebrown",
+      "description": "A responsive GitHub repository gallery with live profile data, repository search, and individual project details. Built with HTML, CSS, and JavaScript.",
+      "html_url": "https://github.com/charlenebrown/github-repo-gallery",
+      "homepage": null,
+      "default_branch": "main",
+      "languages": [
+        "CSS",
+        "HTML",
+        "JavaScript"
+      ],
+      "updated_at": "2026-10-30T16:41:44Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "id": 1424860147,
+      "name": "sound-of-becoming",
+      "full_name": "charlenebrown/sound-of-becoming",
+      "owner": "charlenebrown",
+      "description": "A listening-circle keepsake website featuring songwriter profiles, song stories, album links, and companion event resources.",
+      "html_url": "https://github.com/charlenebrown/sound-of-becoming",
+      "homepage": null,
+      "default_branch": "main",
+      "languages": [
+        "HTML",
+        "JavaScript"
+      ],
+      "updated_at": "2026-10-30T14:30:24Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "id": 1430151536,
+      "name": "props-dot-notations",
+      "full_name": "charlenebrown/props-dot-notations",
+      "owner": "charlenebrown",
+      "description": "A JavaScript exercise that creates and updates an object with dot notation, then displays its topic and learning-goal count.",
+      "html_url": "https://github.com/charlenebrown/props-dot-notations",
+      "homepage": null,
+      "default_branch": "master",
+      "languages": [
+        "CSS",
+        "HTML",
+        "JavaScript"
+      ],
+      "updated_at": "2026-10-30T14:29:35Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "id": 1435100007,
+      "name": "sharons-pet-rescue-interactive",
+      "full_name": "charlenebrown/sharons-pet-rescue-interactive",
+      "owner": "charlenebrown",
+      "description": "An interactive pet-rescue demo using JavaScript objects, methods, and DOM updates to display each animal’s play or rest status.",
+      "html_url": "https://github.com/charlenebrown/sharons-pet-rescue-interactive",
+      "homepage": null,
+      "default_branch": "master",
+      "languages": [
+        "CSS",
+        "HTML",
+        "JavaScript"
+      ],
+      "updated_at": "2026-10-30T05:15:12Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "id": 1429300420,
+      "name": "potluck-dish-assignment",
+      "full_name": "charlenebrown/potluck-dish-assignment",
+      "owner": "charlenebrown",
+      "description": "An interactive potluck planner that builds a guest list and randomly assigns a different dish to each guest.",
+      "html_url": "https://github.com/charlenebrown/potluck-dish-assignment",
+      "homepage": null,
+      "default_branch": "master",
+      "languages": [
+        "CSS",
+        "HTML",
+        "JavaScript"
+      ],
+      "updated_at": "2026-10-30T05:12:31Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "id": 1436416029,
+      "name": "random-image-api",
+      "full_name": "charlenebrown/random-image-api",
+      "owner": "charlenebrown",
+      "description": "A JavaScript image generator that fetches photos from the Lorem Picsum API and displays a randomly selected image on demand.",
+      "html_url": "https://github.com/charlenebrown/random-image-api",
+      "homepage": null,
+      "default_branch": "master",
+      "languages": [
+        "CSS",
+        "HTML",
+        "JavaScript"
+      ],
+      "updated_at": "2026-10-30T05:12:00Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "id": 1437211940,
+      "name": "guess-the-word",
+      "full_name": "charlenebrown/guess-the-word",
+      "owner": "charlenebrown",
+      "description": "Digital Flagship: Decode the Decision—a cyber-themed word game exploring strategy, tech governance, and cybersecurity through letter guesses and optional hints.",
+      "html_url": "https://github.com/charlenebrown/guess-the-word",
+      "homepage": null,
+      "default_branch": "master",
+      "languages": [
+        "CSS",
+        "HTML",
+        "JavaScript"
+      ],
+      "updated_at": "2026-10-30T05:11:40Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "id": 1431402944,
+      "name": "js-dom-lesson",
+      "full_name": "charlenebrown/js-dom-lesson",
+      "owner": "charlenebrown",
+      "description": "Let's learn Javascript!!!",
+      "html_url": "https://github.com/charlenebrown/js-dom-lesson",
+      "homepage": null,
+      "default_branch": "main",
+      "languages": [
+        "CSS",
+        "HTML",
+        "JavaScript"
+      ],
+      "updated_at": "2026-10-23T18:21:07Z",
+      "archived": false,
+      "fork": true
+    },
+    {
+      "id": 1430372900,
+      "name": "all-about-methods",
+      "full_name": "charlenebrown/all-about-methods",
+      "owner": "charlenebrown",
+      "description": null,
+      "html_url": "https://github.com/charlenebrown/all-about-methods",
+      "homepage": null,
+      "default_branch": "master",
+      "languages": [
+        "CSS",
+        "HTML",
+        "JavaScript"
+      ],
+      "updated_at": "2026-10-22T23:25:40Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "id": 1429274947,
+      "name": "potluck-guest-list",
+      "full_name": "charlenebrown/potluck-guest-list",
+      "owner": "charlenebrown",
+      "description": null,
+      "html_url": "https://github.com/charlenebrown/potluck-guest-list",
+      "homepage": null,
+      "default_branch": "master",
+      "languages": [
+        "CSS",
+        "HTML",
+        "JavaScript"
+      ],
+      "updated_at": "2026-10-22T05:16:43Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "id": 1429217057,
+      "name": "grocery-list",
+      "full_name": "charlenebrown/grocery-list",
+      "owner": "charlenebrown",
+      "description": null,
+      "html_url": "https://github.com/charlenebrown/grocery-list",
+      "homepage": null,
+      "default_branch": "master",
+      "languages": [
+        "HTML",
+        "JavaScript"
+      ],
+      "updated_at": "2026-10-22T03:58:55Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "id": 1429198965,
+      "name": "loopy-arrays",
+      "full_name": "charlenebrown/loopy-arrays",
+      "owner": "charlenebrown",
+      "description": null,
+      "html_url": "https://github.com/charlenebrown/loopy-arrays",
+      "homepage": null,
+      "default_branch": "master",
+      "languages": [
+        "HTML",
+        "JavaScript"
+      ],
+      "updated_at": "2026-10-22T03:33:25Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "id": 1429175737,
+      "name": "arrays-project",
+      "full_name": "charlenebrown/arrays-project",
+      "owner": "charlenebrown",
+      "description": null,
+      "html_url": "https://github.com/charlenebrown/arrays-project",
+      "homepage": null,
+      "default_branch": "master",
+      "languages": [
+        "HTML",
+        "JavaScript"
+      ],
+      "updated_at": "2026-10-22T03:04:03Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "id": 1429013099,
+      "name": "subscription-calculator",
+      "full_name": "charlenebrown/subscription-calculator",
+      "owner": "charlenebrown",
+      "description": null,
+      "html_url": "https://github.com/charlenebrown/subscription-calculator",
+      "homepage": null,
+      "default_branch": "master",
+      "languages": [
+        "CSS",
+        "HTML",
+        "JavaScript"
+      ],
+      "updated_at": "2026-10-22T00:34:33Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "id": 1428976064,
+      "name": "functon-powered-modal",
+      "full_name": "charlenebrown/functon-powered-modal",
+      "owner": "charlenebrown",
+      "description": null,
+      "html_url": "https://github.com/charlenebrown/functon-powered-modal",
+      "homepage": null,
+      "default_branch": "master",
+      "languages": [
+        "CSS",
+        "HTML",
+        "JavaScript"
+      ],
+      "updated_at": "2026-10-21T22:03:21Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "id": 1428897341,
+      "name": "create-vacay-budget",
+      "full_name": "charlenebrown/create-vacay-budget",
+      "owner": "charlenebrown",
+      "description": null,
+      "html_url": "https://github.com/charlenebrown/create-vacay-budget",
+      "homepage": null,
+      "default_branch": "master",
+      "languages": [
+        "CSS",
+        "HTML",
+        "JavaScript"
+      ],
+      "updated_at": "2026-10-21T20:29:49Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "id": 1428865000,
+      "name": "whats-your-function",
+      "full_name": "charlenebrown/whats-your-function",
+      "owner": "charlenebrown",
+      "description": null,
+      "html_url": "https://github.com/charlenebrown/whats-your-function",
+      "homepage": null,
+      "default_branch": "master",
+      "languages": [
+        "HTML",
+        "JavaScript"
+      ],
+      "updated_at": "2026-10-21T19:55:29Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "id": 1428587032,
+      "name": "kitty-event",
+      "full_name": "charlenebrown/kitty-event",
+      "owner": "charlenebrown",
+      "description": "Testing JS Events with Kitty",
+      "html_url": "https://github.com/charlenebrown/kitty-event",
+      "homepage": null,
+      "default_branch": "main",
+      "languages": [
+        "CSS",
+        "HTML",
+        "JavaScript"
+      ],
+      "updated_at": "2026-10-21T16:27:20Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "id": 1428490444,
+      "name": "js-html-project",
+      "full_name": "charlenebrown/js-html-project",
+      "owner": "charlenebrown",
+      "description": null,
+      "html_url": "https://github.com/charlenebrown/js-html-project",
+      "homepage": null,
+      "default_branch": "main",
+      "languages": [
+        "CSS",
+        "HTML",
+        "JavaScript"
+      ],
+      "updated_at": "2026-10-21T15:24:06Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "id": 1427834253,
+      "name": "what-time-is-it",
+      "full_name": "charlenebrown/what-time-is-it",
+      "owner": "charlenebrown",
+      "description": "Testing JS and time",
+      "html_url": "https://github.com/charlenebrown/what-time-is-it",
+      "homepage": null,
+      "default_branch": "main",
+      "languages": [
+        "HTML",
+        "JavaScript"
+      ],
+      "updated_at": "2026-10-21T03:48:32Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "id": 1427792654,
+      "name": "what-day-is-it",
+      "full_name": "charlenebrown/what-day-is-it",
+      "owner": "charlenebrown",
+      "description": "Testing JS",
+      "html_url": "https://github.com/charlenebrown/what-day-is-it",
+      "homepage": null,
+      "default_branch": "main",
+      "languages": [
+        "HTML",
+        "JavaScript"
+      ],
+      "updated_at": "2026-10-21T03:08:11Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "id": 1427806563,
+      "name": "castellan-method",
+      "full_name": "charlenebrown/castellan-method",
+      "owner": "charlenebrown",
+      "description": "Fictional executive-consulting demo site: Astro, TypeScript, Tailwind v4, React islands, Python and Pyodide",
+      "html_url": "https://github.com/charlenebrown/castellan-method",
+      "homepage": null,
+      "default_branch": "main",
+      "languages": [
+        "Astro",
+        "CSS",
+        "JavaScript",
+        "Python",
+        "TypeScript"
+      ],
+      "updated_at": "2026-10-21T02:56:21Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "id": 1426365610,
+      "name": "js-lesson02-challenge-2",
+      "full_name": "charlenebrown/js-lesson02-challenge-2",
+      "owner": "charlenebrown",
+      "description": "JS Challenge #2",
+      "html_url": "https://github.com/charlenebrown/js-lesson02-challenge-2",
+      "homepage": null,
+      "default_branch": "main",
+      "languages": [
+        "HTML",
+        "JavaScript"
+      ],
+      "updated_at": "2026-10-20T01:30:25Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "id": 1426305254,
+      "name": "js-lesson02-challenge-1",
+      "full_name": "charlenebrown/js-lesson02-challenge-1",
+      "owner": "charlenebrown",
+      "description": "JS challenge #1",
+      "html_url": "https://github.com/charlenebrown/js-lesson02-challenge-1",
+      "homepage": null,
+      "default_branch": "main",
+      "languages": [
+        "HTML",
+        "JavaScript"
+      ],
+      "updated_at": "2026-10-20T00:06:45Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "id": 1426043030,
+      "name": "my-first-js-script",
+      "full_name": "charlenebrown/my-first-js-script",
+      "owner": "charlenebrown",
+      "description": "Working on JS Script-driven project",
+      "html_url": "https://github.com/charlenebrown/my-first-js-script",
+      "homepage": null,
+      "default_branch": "main",
+      "languages": [
+        "HTML",
+        "JavaScript"
+      ],
+      "updated_at": "2026-10-19T19:23:45Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "id": 1412284764,
+      "name": "responsive-websites",
+      "full_name": "charlenebrown/responsive-websites",
+      "owner": "charlenebrown",
+      "description": null,
+      "html_url": "https://github.com/charlenebrown/responsive-websites",
+      "homepage": null,
+      "default_branch": "main",
+      "languages": [
+        "CSS",
+        "HTML"
+      ],
+      "updated_at": "2026-10-09T19:18:00Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "id": 1412137662,
+      "name": "206-L06-S05-starter",
+      "full_name": "charlenebrown/206-L06-S05-starter",
+      "owner": "charlenebrown",
+      "description": "About page sample",
+      "html_url": "https://github.com/charlenebrown/206-L06-S05-starter",
+      "homepage": null,
+      "default_branch": "main",
+      "languages": [
+        "CSS",
+        "HTML"
+      ],
+      "updated_at": "2026-10-09T16:23:52Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "id": 1411320224,
+      "name": "206-L06-S04-starter",
+      "full_name": "charlenebrown/206-L06-S04-starter",
+      "owner": "charlenebrown",
+      "description": "sample background image flexbox site",
+      "html_url": "https://github.com/charlenebrown/206-L06-S04-starter",
+      "homepage": null,
+      "default_branch": "main",
+      "languages": [
+        "CSS",
+        "HTML"
+      ],
+      "updated_at": "2026-10-09T05:12:58Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "id": 1411272807,
+      "name": "big-bad-guide-to-flexbox-model-worksheet",
+      "full_name": "charlenebrown/big-bad-guide-to-flexbox-model-worksheet",
+      "owner": "charlenebrown",
+      "description": "working with responsive flexboxes",
+      "html_url": "https://github.com/charlenebrown/big-bad-guide-to-flexbox-model-worksheet",
+      "homepage": null,
+      "default_branch": "main",
+      "languages": [
+        "CSS",
+        "HTML"
+      ],
+      "updated_at": "2026-10-09T04:23:17Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "id": 1411012057,
+      "name": "writers-guild",
+      "full_name": "charlenebrown/writers-guild",
+      "owner": "charlenebrown",
+      "description": "sample concept of association website",
+      "html_url": "https://github.com/charlenebrown/writers-guild",
+      "homepage": null,
+      "default_branch": "main",
+      "languages": [
+        "HTML",
+        "JavaScript"
+      ],
+      "updated_at": "2026-10-08T22:50:05Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "id": 1410408330,
+      "name": "206-L04-S03-starter",
+      "full_name": "charlenebrown/206-L04-S03-starter",
+      "owner": "charlenebrown",
+      "description": "updating client media request",
+      "html_url": "https://github.com/charlenebrown/206-L04-S03-starter",
+      "homepage": null,
+      "default_branch": "main",
+      "languages": [
+        "CSS",
+        "HTML"
+      ],
+      "updated_at": "2026-10-08T13:42:44Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "id": 1410366473,
+      "name": "206-L04-S02-starter",
+      "full_name": "charlenebrown/206-L04-S02-starter",
+      "owner": "charlenebrown",
+      "description": "testing responsive media updated",
+      "html_url": "https://github.com/charlenebrown/206-L04-S02-starter",
+      "homepage": null,
+      "default_branch": "main",
+      "languages": [
+        "CSS",
+        "HTML"
+      ],
+      "updated_at": "2026-10-08T13:14:21Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "id": 1409652195,
+      "name": "03.01-206-colors-starter",
+      "full_name": "charlenebrown/03.01-206-colors-starter",
+      "owner": "charlenebrown",
+      "description": "testing media",
+      "html_url": "https://github.com/charlenebrown/03.01-206-colors-starter",
+      "homepage": null,
+      "default_branch": "main",
+      "languages": [
+        "CSS",
+        "HTML"
+      ],
+      "updated_at": "2026-10-08T03:54:58Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "id": 1407283503,
+      "name": "206-L01-S03-and-S08-starter",
+      "full_name": "charlenebrown/206-L01-S03-and-S08-starter",
+      "owner": "charlenebrown",
+      "description": "Practicing with editing a basic online business card",
+      "html_url": "https://github.com/charlenebrown/206-L01-S03-and-S08-starter",
+      "homepage": null,
+      "default_branch": "main",
+      "languages": [
+        "CSS",
+        "HTML"
+      ],
+      "updated_at": "2026-10-06T12:42:45Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "id": 1404891513,
+      "name": "charlenebrown",
+      "full_name": "charlenebrown/charlenebrown",
+      "owner": "charlenebrown",
+      "description": "about me and my purpose to code",
+      "html_url": "https://github.com/charlenebrown/charlenebrown",
+      "homepage": null,
+      "default_branch": "main",
+      "languages": [],
+      "updated_at": "2026-10-05T02:11:38Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "id": 1404884391,
+      "name": "kingsbridge-university",
+      "full_name": "charlenebrown/kingsbridge-university",
+      "owner": "charlenebrown",
+      "description": "sample education site",
+      "html_url": "https://github.com/charlenebrown/kingsbridge-university",
+      "homepage": null,
+      "default_branch": "main",
+      "languages": [
+        "HTML"
+      ],
+      "updated_at": "2026-10-05T02:11:24Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "id": 1404983892,
+      "name": "zora-reign",
+      "full_name": "charlenebrown/zora-reign",
+      "owner": "charlenebrown",
+      "description": "sample artist site",
+      "html_url": "https://github.com/charlenebrown/zora-reign",
+      "homepage": null,
+      "default_branch": "main",
+      "languages": [
+        "HTML"
+      ],
+      "updated_at": "2026-10-05T02:11:22Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "id": 1404852799,
+      "name": "jubilee-austen",
+      "full_name": "charlenebrown/jubilee-austen",
+      "owner": "charlenebrown",
+      "description": "sample site",
+      "html_url": "https://github.com/charlenebrown/jubilee-austen",
+      "homepage": null,
+      "default_branch": "main",
+      "languages": [
+        "CSS",
+        "HTML"
+      ],
+      "updated_at": "2026-10-04T21:36:21Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "id": 1404599102,
+      "name": "git-practice-v2",
+      "full_name": "charlenebrown/git-practice-v2",
+      "owner": "charlenebrown",
+      "description": "A collection of advice from students to students! Serves as a practice exercise in the Skillcrush Front End Development track.",
+      "html_url": "https://github.com/charlenebrown/git-practice-v2",
+      "homepage": null,
+      "default_branch": "main",
+      "languages": [
+        "CSS",
+        "HTML"
+      ],
+      "updated_at": "2026-10-04T16:05:34Z",
+      "archived": false,
+      "fork": true
+    },
+    {
+      "id": 1402047319,
+      "name": "105-coding_resources",
+      "full_name": "charlenebrown/105-coding_resources",
+      "owner": "charlenebrown",
+      "description": null,
+      "html_url": "https://github.com/charlenebrown/105-coding_resources",
+      "homepage": null,
+      "default_branch": "main",
+      "languages": [
+        "CSS",
+        "HTML"
+      ],
+      "updated_at": "2026-10-04T15:59:25Z",
+      "archived": false,
+      "fork": true
+    },
+    {
+      "id": 1404559342,
+      "name": "105-turn_back_time",
+      "full_name": "charlenebrown/105-turn_back_time",
+      "owner": "charlenebrown",
+      "description": null,
+      "html_url": "https://github.com/charlenebrown/105-turn_back_time",
+      "homepage": null,
+      "default_branch": "main",
+      "languages": [
+        "CSS",
+        "HTML"
+      ],
+      "updated_at": "2026-10-04T15:21:10Z",
+      "archived": false,
+      "fork": true
+    },
+    {
+      "id": 1400983931,
+      "name": "105-project",
+      "full_name": "charlenebrown/105-project",
+      "owner": "charlenebrown",
+      "description": "105 Sample Code",
+      "html_url": "https://github.com/charlenebrown/105-project",
+      "homepage": null,
+      "default_branch": "main",
+      "languages": [
+        "CSS",
+        "HTML"
+      ],
+      "updated_at": "2026-10-02T03:22:11Z",
+      "archived": false,
+      "fork": true
+    },
+    {
+      "id": 1400945437,
+      "name": "my-first-repo",
+      "full_name": "charlenebrown/my-first-repo",
+      "owner": "charlenebrown",
+      "description": "Website design for Seasons Lawn Care",
+      "html_url": "https://github.com/charlenebrown/my-first-repo",
+      "homepage": null,
+      "default_branch": "main",
+      "languages": [],
+      "updated_at": "2026-10-02T02:44:51Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "id": 38929021,
+      "name": "creativenaturalista.github.io",
+      "full_name": "charlenebrown/creativenaturalista.github.io",
+      "owner": "charlenebrown",
+      "description": null,
+      "html_url": "https://github.com/charlenebrown/creativenaturalista.github.io",
+      "homepage": null,
+      "default_branch": "master",
+      "languages": [
+        "HTML"
+      ],
+      "updated_at": "2026-09-30T13:52:47Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "id": 38928740,
+      "name": "instagram-ruby-gem",
+      "full_name": "charlenebrown/instagram-ruby-gem",
+      "owner": "charlenebrown",
+      "description": "The official gem for the Instagram API",
+      "html_url": "https://github.com/charlenebrown/instagram-ruby-gem",
+      "homepage": "http://instagram.com/developer/",
+      "default_branch": "master",
+      "languages": [
+        "Ruby"
+      ],
+      "updated_at": "2021-12-20T01:46:58Z",
+      "archived": false,
+      "fork": true
+    },
+    {
+      "id": 111444340,
+      "name": "Divi-100-Back-To-Top",
+      "full_name": "charlenebrown/Divi-100-Back-To-Top",
+      "owner": "charlenebrown",
+      "description": "Custom Back To Top button styles",
+      "html_url": "https://github.com/charlenebrown/Divi-100-Back-To-Top",
+      "homepage": null,
+      "default_branch": "master",
+      "languages": [
+        "CSS",
+        "JavaScript",
+        "PHP"
+      ],
+      "updated_at": "2017-11-20T17:56:23Z",
+      "archived": false,
+      "fork": true
+    },
+    {
+      "id": 86010716,
+      "name": "skillcrush-105",
+      "full_name": "charlenebrown/skillcrush-105",
+      "owner": "charlenebrown",
+      "description": "Skillcrush 104 class fun!",
+      "html_url": "https://github.com/charlenebrown/skillcrush-105",
+      "homepage": null,
+      "default_branch": "master",
+      "languages": [
+        "CSS",
+        "HTML",
+        "Ruby"
+      ],
+      "updated_at": "2017-03-24T00:31:32Z",
+      "archived": false,
+      "fork": true
+    },
+    {
+      "id": 85904771,
+      "name": "105-git-project",
+      "full_name": "charlenebrown/105-git-project",
+      "owner": "charlenebrown",
+      "description": "working on git projects for skillcrush",
+      "html_url": "https://github.com/charlenebrown/105-git-project",
+      "homepage": null,
+      "default_branch": "master",
+      "languages": [
+        "CSS",
+        "HTML"
+      ],
+      "updated_at": "2017-03-23T03:57:41Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "id": 85407114,
+      "name": "Responsive-Design-Testing",
+      "full_name": "charlenebrown/Responsive-Design-Testing",
+      "owner": "charlenebrown",
+      "description": "A simple HTML page to test out your responsive web design",
+      "html_url": "https://github.com/charlenebrown/Responsive-Design-Testing",
+      "homepage": "http://mattkersley.com/responsive",
+      "default_branch": "master",
+      "languages": [
+        "HTML",
+        "JavaScript"
+      ],
+      "updated_at": "2017-03-18T14:25:05Z",
+      "archived": false,
+      "fork": true
+    },
+    {
+      "id": 83448878,
+      "name": "styleguide",
+      "full_name": "charlenebrown/styleguide",
+      "owner": "charlenebrown",
+      "description": "Style guides for Google-originated open-source projects",
+      "html_url": "https://github.com/charlenebrown/styleguide",
+      "homepage": null,
+      "default_branch": "gh-pages",
+      "languages": [
+        "C",
+        "CSS",
+        "Emacs Lisp",
+        "HTML",
+        "JavaScript",
+        "Python",
+        "Vim Script",
+        "XSLT"
+      ],
+      "updated_at": "2017-02-28T15:31:53Z",
+      "archived": false,
+      "fork": true
+    },
+    {
+      "id": 39306647,
+      "name": "activerecord-app",
+      "full_name": "charlenebrown/activerecord-app",
+      "owner": "charlenebrown",
+      "description": "apps through active record",
+      "html_url": "https://github.com/charlenebrown/activerecord-app",
+      "homepage": null,
+      "default_branch": "master",
+      "languages": [
+        "Ruby"
+      ],
+      "updated_at": "2015-07-19T04:24:33Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "id": 39027448,
+      "name": "weather",
+      "full_name": "charlenebrown/weather",
+      "owner": "charlenebrown",
+      "description": "testing weather app",
+      "html_url": "https://github.com/charlenebrown/weather",
+      "homepage": null,
+      "default_branch": "master",
+      "languages": [
+        "Ruby"
+      ],
+      "updated_at": "2015-07-13T18:25:31Z",
+      "archived": false,
+      "fork": false
+    },
+    {
+      "id": 38860380,
+      "name": "skillcrush-104",
+      "full_name": "charlenebrown/skillcrush-104",
+      "owner": "charlenebrown",
+      "description": "Skillcrush 104!",
+      "html_url": "https://github.com/charlenebrown/skillcrush-104",
+      "homepage": null,
+      "default_branch": "master",
+      "languages": [
+        "Ruby"
+      ],
+      "updated_at": "2015-07-10T04:09:36Z",
+      "archived": false,
+      "fork": true
+    },
+    {
+      "id": 38855448,
+      "name": "ruby-challenges",
+      "full_name": "charlenebrown/ruby-challenges",
+      "owner": "charlenebrown",
+      "description": null,
+      "html_url": "https://github.com/charlenebrown/ruby-challenges",
+      "homepage": null,
+      "default_branch": "master",
+      "languages": [
+        "Ruby"
+      ],
+      "updated_at": "2015-07-10T03:51:15Z",
+      "archived": false,
+      "fork": false
+    }
+  ]
+}
