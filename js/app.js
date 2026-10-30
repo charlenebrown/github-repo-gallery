@@ -1,9 +1,12 @@
 const userData = document.querySelector(".user-data");
 const username = "charlenebrown";
 const repoList = document.querySelector(".repo-list");
+const allReposContainer = document.querySelector(".repos");
+const repoData = document.querySelector(".repo-data");
+
 
 const gitUserInfo = async function () {
-    const userInfo = await fetch(`https://api.github.com/users/${charlenebrown}`);
+    const userInfo = await fetch(`https://api.github.com/users/${username}`);
     const data = await userInfo.json();
     displayUserInfo(data);
 };
@@ -39,4 +42,43 @@ const displayRepos = function (repos) {
         repoItem.classList.add("repo");
         repoItem.innerHTML = `<button type="button" class="repo-name">${repo.name}</button>`;
     } 
+};
+
+repoList.addEventListener("click", function (e) {
+    if (e.target.matches(".repo-name")) {
+        getRepoInfo(repoName);
+    }
+});
+
+const getRepoInfo = async function (repoName) {
+    const fetchInfo = await fetch(`https://api.github.com/repos/${username}/${repoName}`);
+    const repoInfo = await fetchInfo.json();
+    console.log(repoInfo);
+
+    const fetchLanguages = await fetch(repoInfo.languages_url);
+    const languageData = await fetchLanguages.json();
+
+    const languages = [];
+    for (const language in languageData) {
+        language.push(language);
+    }
+
+    displayRepoInfo(repoInfo, languages);
+};
+
+
+const displayRepoInfo = function (repoInfo, languages) {
+    repoData.innerHTML = "";
+    repoData.classList.remove("hide");
+    allReposContainer.classList.add("hide");
+    const div = document.createElement("div");
+    div.classList.add("repo-info");
+    div.innerHTML = `
+        <h2>Name: ${repoInfo.name}</h2>
+        <p>Description: ${repoInfo.description}</p>
+        <p>Default Branch: ${repoInfo.default_branch}</p>
+        <p>Languages: ${languages.join(", ")}</p>
+        <a class="visit" href="${repoInfo.html_url}" target="_blank" rel="noreferrer noopener">View My Repo on GitHub!</a>
+    `;
+    repoData.append(div);
 };
