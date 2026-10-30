@@ -2,7 +2,7 @@ const username = "charlenebrown";
 const repoList = document.querySelector(".repo-list");
 const allReposContainer = document.querySelector(".repos");
 const repoData = document.querySelector(".repo-data");
-const viewReposButton = document.querySelector(".view-repos");
+const viewReposButton = document.querySelector(".back-to-gallery");
 const filterInput = document.querySelector(".filter-repos");
 
 const gitUserInfo = async function () {
@@ -12,7 +12,6 @@ const gitUserInfo = async function () {
 };
 
 gitUserInfo();
-
 const displayUserInfo = function (data) {
     const avatar = document.querySelector(".user-avatar");
     const name = document.querySelector(".user-name span");
@@ -57,8 +56,16 @@ repoList.addEventListener("click", function (e) {
 });
 
 const getRepoInfo = async function (repoName) {
-    const fetchInfo = await fetch(`https://api.github.com/repos/${username}/${repoName}`);
-    const repoInfo = await fetchInfo.json();
+   const fetchInfo = await fetch(`https://api.github.com/repos/${username}/${repoName}`);
+
+    if (!fetchInfo.ok) {
+        console.error(
+        `Could not load repository "${repoName}". GitHub returned ${fetchInfo.status}.`
+    );
+    return;
+}
+
+const repoInfo = await fetchInfo.json();
     //console.log(repoInfo);
 
     const fetchLanguages = await fetch(repoInfo.languages_url);
@@ -66,7 +73,7 @@ const getRepoInfo = async function (repoName) {
 
     const languages = [];
     for (const language in languageData) {
-        language.push(language);
+        languages.push(language);
     }
 
     displayRepoInfo(repoInfo, languages);
