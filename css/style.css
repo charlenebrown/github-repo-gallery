@@ -90,10 +90,19 @@ textarea {
   box-sizing: border-box;
 }
 
+:root {
+  --onyx: #111111;
+  --surface: #1d1d1d;
+  --teal: #30ced9;
+  --mustard: #e5d704;
+  --cream: #fbf9de;
+  --muted: #cccccc;
+}
+
 body {
   margin: 0;
-  background-color: #fbf9de;
-  color: #333;
+  background-color: var(--onyx);
+  color: var(--cream);
   font-family: "Open Sans", sans-serif;
   font-size: 1.125rem;
   line-height: 1.5;
@@ -104,38 +113,41 @@ body {
   z-index: 1;
   display: flex;
   flex-direction: column;
-  width: 50px;
-  height: 80px;
-  margin: 10px auto -35px;
-  border-radius: 10px;
-  background-color: gray;
+  width: 3.125rem;
+  height: 5rem;
+  margin: 0.625rem auto -2.1875rem;
+  border-radius: 0.625rem;
+  background-color: var(--teal);
 }
 
 .circle {
   align-self: center;
-  width: 20px;
-  height: 20px;
+  width: 1.25rem;
+  height: 1.25rem;
   margin-top: auto;
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
   border-radius: 50%;
-  background-color: #483978;
+  background-color: var(--onyx);
 }
 
 header {
-  padding: 2rem 1rem;
-  background-color: #483978;
-  color: #fff;
+  padding: 3rem 1rem 2rem;
+  border-bottom: 2px solid var(--teal);
+  background-color: var(--surface);
   text-align: center;
 }
 
 h1 {
   margin: 0;
   font-family: "Oswald", sans-serif;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   font-weight: 500;
   line-height: 1.2;
 }
 
+h1 i {
+  color: var(--mustard);
+}
 
 /* Mobile page spacing and profile */
 
@@ -151,6 +163,11 @@ h1 {
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid var(--teal);
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  background-color: var(--surface);
   text-align: center;
 }
 
@@ -160,6 +177,7 @@ h1 {
   max-width: 100%;
   aspect-ratio: 1;
   object-fit: cover;
+  border: 3px solid var(--mustard);
   border-radius: 50%;
 }
 
@@ -173,16 +191,27 @@ h1 {
   margin: 0 0 1rem;
 }
 
-.user-details hr {
-  margin: 1.5rem 0 0;
+.user-name {
+  color: var(--teal);
+  font-size: 1.5rem;
 }
 
+.user-location,
+.user-stats {
+  color: var(--muted);
+}
+
+.user-details hr {
+  margin: 1.5rem 0 0;
+  border-top-color: var(--teal);
+}
 
 /* Repository search and gallery */
 
 .repos {
   padding: 1.5rem 1rem;
-  background-color: #fff;
+  background-color: var(--surface);
+  color: var(--cream);
 }
 
 .search {
@@ -209,7 +238,7 @@ h1 {
 }
 
 .search i {
-  color: #483978;
+  color: #eee52f;
 }
 
 .repo-list {
@@ -225,7 +254,7 @@ h1 {
   display: flex;
   flex: 0 0 100%;
   min-width: 0;
-  border: 1px solid #f7614a;
+  border: 1px solid #d5e825;
 }
 
 .repo-name {
@@ -233,7 +262,7 @@ h1 {
   padding: 1rem;
   border: 0;
   background-color: transparent;
-  color: #f7614a;
+  color: #30ced9;
   font: inherit;
   font-weight: 700;
   text-align: left;
@@ -242,7 +271,7 @@ h1 {
 }
 
 .repo-name:hover {
-  background-color: #f7614a;
+  background-color: #1b8895;
   color: #fff;
 }
 
