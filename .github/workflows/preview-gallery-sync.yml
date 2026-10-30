@@ -1,0 +1,37 @@
+name: Preview gallery sync
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out project
+        uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7.1.0
+        with:
+          node-version: '24'
+          package-manager-cache: false
+
+      - name: Collect public GitHub data
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GALLERY_OWNER: charlenebrown
+        run: node scripts/sync-github.mjs
+
+      - name: Save reviewable data file
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: github-gallery-data
+          path: data/github-gallery.json
+          if-no-files-found: error
+          retention-days: 7
