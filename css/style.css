@@ -527,10 +527,11 @@ h1 i {
 @media (min-width: 700px) {
   .repos {
     padding: 2rem;
-    .featured-card {
+  }
+
+  .featured-card {
     flex-basis: calc((100% - 1.5rem) / 2);
     }
-  }
 
   .repo {
     flex-basis: calc((100% - 1.5rem) / 2);
