@@ -441,6 +441,67 @@ h1 i {
 }
 
 
+/* Gallery pagination */
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.page-dots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-width: 0;
+}
+
+.pagination button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background-color: transparent;
+  color: var(--teal);
+  font: inherit;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.page-dot span {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: #887f25;
+}
+
+.page-dot.is-current span {
+  background-color: var(--teal);
+}
+
+.pagination button:hover:not(:disabled) {
+  background-color: var(--onyx);
+}
+
+.pagination button:focus-visible {
+  outline: 3px solid var(--mustard);
+  outline-offset: 2px;
+}
+
+.pagination button:disabled {
+  color: var(--muted);
+  opacity: 0.4;
+  cursor: default;
+}
+
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */

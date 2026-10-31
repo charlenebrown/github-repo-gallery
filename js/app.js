@@ -8,6 +8,15 @@ const languageFilter = document.querySelector("#filter-language");
 const galleryStatus = document.querySelector(".gallery-status");
 
 let galleryRepos = [];
+const reposPerPage = 20;
+
+const pagination = document.querySelector(".pagination");
+const pageDots = document.querySelector(".page-dots");
+const previousPage = document.querySelector(".page-previous");
+const nextPage = document.querySelector(".page-next");
+
+let filteredRepos = [];
+let currentPage = 1;
 
 const gitUserInfo = async function () {
     const userInfo = await fetch(`https://api.github.com/users/${username}`);
@@ -168,7 +177,7 @@ const applyGalleryFilters = function () {
     const searchText = filterInput.value.trim().toLowerCase();
     const selectedLanguage = languageFilter.value;
 
-    const matchingRepos = galleryRepos.filter(function (repo) {
+    filteredRepos = galleryRepos.filter(function (repo) {
         const searchableName =
             `${getGalleryTitle(repo.name)} ${repo.name}`.toLowerCase();
 
@@ -181,12 +190,99 @@ const applyGalleryFilters = function () {
         return matchesName && matchesLanguage;
     });
 
-    displayRepos(matchingRepos);
-
-    galleryStatus.textContent = matchingRepos.length === 0
-        ? "No repositories match your search and language selection."
-        : `Showing ${matchingRepos.length} of ${galleryRepos.length} repositories.`;
+    currentPage = 1;
+    buildPageDots();
+    displayGalleryPage();
 };
+
+
+
+
+const buildPageDots = function () {
+    const totalPages = Math.ceil(filteredRepos.length / reposPerPage);
+
+    pageDots.replaceChildren();
+
+    for (let page = 1; page <= totalPages; page += 1) {
+        const button = document.createElement("button");
+
+        button.type = "button";
+        button.classList.add("page-dot");
+        button.dataset.page = page;
+        button.setAttribute("aria-label", `Go to repository page ${page}`);
+
+        const dot = document.createElement("span");
+        dot.setAttribute("aria-hidden", "true");
+
+        button.append(dot);
+        pageDots.append(button);
+    }
+
+    pagination.hidden = totalPages <= 1;
+};
+
+const displayGalleryPage = function () {
+    const totalPages = Math.ceil(filteredRepos.length / reposPerPage);
+    const start = (currentPage - 1) * reposPerPage;
+    const pageRepos = filteredRepos.slice(start, start + reposPerPage);
+
+    displayRepos(pageRepos);
+
+    previousPage.disabled = currentPage === 1;
+    nextPage.disabled = currentPage >= totalPages;
+
+    for (const button of pageDots.children) {
+        const isCurrent = Number(button.dataset.page) === currentPage;
+
+        button.classList.toggle("is-current", isCurrent);
+
+        if (isCurrent) {
+            button.setAttribute("aria-current", "page");
+        } else {
+            button.removeAttribute("aria-current");
+        }
+    }
+
+    galleryStatus.textContent = filteredRepos.length === 0
+        ? "No repositories match your search and language selection."
+        : `Showing repositories ${start + 1}–${start + pageRepos.length} of ${filteredRepos.length} matching results.`;
+};
+
+const goToPage = function (page) {
+    const totalPages = Math.ceil(filteredRepos.length / reposPerPage);
+
+    if (page < 1 || page > totalPages) return;
+
+    currentPage = page;
+    displayGalleryPage();
+
+    // Keep keyboard focus visible if an arrow becomes disabled.
+    if (
+        document.activeElement === previousPage && previousPage.disabled ||
+        document.activeElement === nextPage && nextPage.disabled
+    ) {
+        pageDots
+            .querySelector('[aria-current="page"]')
+            ?.focus();
+    }
+};
+
+previousPage.addEventListener("click", function () {
+    goToPage(currentPage - 1);
+});
+
+nextPage.addEventListener("click", function () {
+    goToPage(currentPage + 1);
+});
+
+pageDots.addEventListener("click", function (event) {
+    const button = event.target.closest(".page-dot");
+
+    if (button) {
+        goToPage(Number(button.dataset.page));
+    }
+});
+
 
 filterInput.addEventListener("input", applyGalleryFilters);
 languageFilter.addEventListener("change", applyGalleryFilters);
