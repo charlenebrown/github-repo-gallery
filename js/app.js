@@ -4,6 +4,10 @@ const allReposContainer = document.querySelector(".repos");
 const repoData = document.querySelector(".repo-data");
 const viewReposButton = document.querySelector(".back-to-gallery");
 const filterInput = document.querySelector(".filter-repos");
+const languageFilter = document.querySelector("#filter-language");
+const galleryStatus = document.querySelector(".gallery-status");
+
+let galleryRepos = [];
 
 const gitUserInfo = async function () {
     const userInfo = await fetch(`https://api.github.com/users/${username}`);
@@ -29,14 +33,56 @@ const displayUserInfo = function (data) {
 
     document.querySelector(".user-info").hidden = false;
 
-    gitRepos();
+
 };
 
 
 const gitRepos = async function () {
-    const fetchRepos = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=100`);
-    const repoData = await fetchRepos.json();
-    displayRepos(repoData);
+    galleryStatus.textContent = "Loading repositories…";
+
+    try {
+        const response = await fetch("data/github-gallery.json");
+
+        if (!response.ok) {
+            throw new Error(`Gallery data returned ${response.status}.`);
+        }
+
+        const snapshot = await response.json();
+        galleryRepos = snapshot.repositories;
+
+        languageFilter.replaceChildren();
+
+        const allOption = document.createElement("option");
+        allOption.value = "";
+        allOption.textContent = "All languages";
+        languageFilter.append(allOption);
+
+        const languages = new Set();
+
+        for (const repo of galleryRepos) {
+            for (const language of repo.languages) {
+                languages.add(language);
+            }
+        }
+
+        const sortedLanguages = [...languages].sort(function (a, b) {
+            return a.localeCompare(b);
+        });
+
+        for (const language of sortedLanguages) {
+            const option = document.createElement("option");
+            option.value = language;
+            option.textContent = language;
+            languageFilter.append(option);
+        }
+
+        languageFilter.disabled = false;
+        applyGalleryFilters();
+    } catch (error) {
+        galleryStatus.textContent =
+            "Repositories could not load. Please refresh and try again.";
+        console.error("Gallery loading failed:", error);
+    }
 };
 
 
@@ -53,6 +99,7 @@ const displayRepos = function (repos) {
         button.classList.add("repo-name");
         button.textContent = getGalleryTitle(repo.name);
         button.dataset.repoName = repo.name;
+        button.dataset.repoOwner = repo.owner;
 
         repoItem.append(button);
         repoList.append(repoItem);
@@ -62,12 +109,14 @@ const displayRepos = function (repos) {
 repoList.addEventListener("click", function (e) {
     if (e.target.matches(".repo-name")) {
         const repoName = e.target.dataset.repoName;
-        getRepoInfo(repoName);
+        getRepoInfo(repoName, e.target.dataset.repoOwner);
     }
 });
 
-const getRepoInfo = async function (repoName) {
-   const fetchInfo = await fetch(`https://api.github.com/repos/${username}/${repoName}`);
+const getRepoInfo = async function (repoName, repoOwner = username) {
+    const fetchInfo = await fetch(
+        `https://api.github.com/repos/${encodeURIComponent(repoOwner)}/${encodeURIComponent(repoName)}`
+    );
 
     if (!fetchInfo.ok) {
         console.error(
@@ -115,22 +164,32 @@ viewReposButton.addEventListener("click", function () {
 });
 
 
-filterInput.addEventListener("input", function (e) {
-    const searchText = e.target.value;
-    const repos = document.querySelectorAll(".repo");
-    const searchLowerText = searchText.toLowerCase();
+const applyGalleryFilters = function () {
+    const searchText = filterInput.value.trim().toLowerCase();
+    const selectedLanguage = languageFilter.value;
 
-    for (const repo of repos) {
-        const button = repo.querySelector(".repo-name");
-        const repoLowerText =
-            `${button.textContent} ${button.dataset.repoName}`.toLowerCase();
-        if (repoLowerText.includes(searchLowerText)) {
-            repo.classList.remove("hide");
-         } else {
-            repo.classList.add("hide");
-    }
-  }
-});
+    const matchingRepos = galleryRepos.filter(function (repo) {
+        const searchableName =
+            `${getGalleryTitle(repo.name)} ${repo.name}`.toLowerCase();
+
+        const matchesName = searchableName.includes(searchText);
+
+        const matchesLanguage =
+            selectedLanguage === "" ||
+            repo.languages.includes(selectedLanguage);
+
+        return matchesName && matchesLanguage;
+    });
+
+    displayRepos(matchingRepos);
+
+    galleryStatus.textContent = matchingRepos.length === 0
+        ? "No repositories match your search and language selection."
+        : `Showing ${matchingRepos.length} of ${galleryRepos.length} repositories.`;
+};
+
+filterInput.addEventListener("input", applyGalleryFilters);
+languageFilter.addEventListener("change", applyGalleryFilters);
 
 const galleryTitles = {
     "github-repo-gallery": "GitHub Repo Gallery",
@@ -216,3 +275,5 @@ const loadFeaturedProjects = async function () {
 };
 
 loadFeaturedProjects();
+
+gitRepos();
